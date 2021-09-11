@@ -6,17 +6,6 @@
 </head>
 <body>
     <script>
-        var x = Number(prompt("Введите x")); // Степень
-        var n = Number(prompt("Введите кол-во шагов")); // Кол-во шагов
-        var x1 = 1;
-
-        /*for(let i = 1; i <= n; i++){
-            x1 = ((-1)**i * x**(2*i))/(factorial(2*i));
-
-        }
-        */
-
-
         function factorial(f){
             let fac = 1;
             for(var i = 1; i <= f; i++){
@@ -25,9 +14,17 @@
             return fac;
         }
 
-        x1 = factorial(3);
+        var x = Number(prompt("Введите x")); // Число, которое вводит пользователь
+        var n = Number(prompt("Введите кол-во шагов")); // Кол-во шагов
+        var formula = 0;
+        var sum = 1;
 
-        document.write(x1);
+        for(let i = 1; i <= n; i++){
+            x1 = ((-1)**i * x**(2*i))/(factorial(2*i));
+            sum += x1;
+        }
+
+        document.write(sum);
     </script>
 </body>
 </html>
