@@ -6,12 +6,15 @@
 </head>
 <body>
     <script>
-        var x = 0;
-        var n = 0; // Кол-во шагов
+        var x = Number(prompt("Введите x")); // Степень
+        var n = Number(prompt("Введите кол-во шагов")); // Кол-во шагов
+        var x1 = 0;
 
-        x = prompt("Введите x");
-        document.write(x);
+        for(let i = 0; i < n; i++){
+            x1 = x**2*2;
+        }
 
+        document.write(x1);
     </script>
 </body>
 </html>
