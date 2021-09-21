@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
+    <title>Formula</title>
     <script>
+    function BTS(){
+        var n = Number(document.form[frm].elements["n"].value);
         function factorial(f){
             let fac = 1;
             for(var i = 1; i <= f; i++){
@@ -26,7 +26,14 @@
             sum += x1;
         }
         
-        document.write(sum);
+        document.write(sum)
+    }
     </script>
+</head>
+<body>
+    <form id="frm">
+        <input type="text" id="n">
+        <input type="submit" onclick="BTS" value="отправить">
+    </form>
 </body>
 </html>
