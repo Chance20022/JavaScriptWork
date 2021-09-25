@@ -15,18 +15,17 @@
         }
         
         function OneSubmit(){
+            alert(1);
             var x = Number(document.form[frm].elements["x"].value); // Число, которое вводит пользователь
             var i = Number(document.form[frm].elements["n"].value); // Кол-во шагов
-
+            alert(2);
             var x1 = 0;
             var sum = 1;
-
+        
             for(let n = 1; n <= i; n++){
                 x1 = (((-1)**n) * (x**(2*n)))/(factorial(2*n));
-                alert(x1);
                 sum += x1;
             }
-
             alert(sum);
         }
     </script>
