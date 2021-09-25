@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <title>Formula</title>
     <script>
-    function BTS(){
-        var n = Number(document.form[frm].elements["n"].value);
+        function OneSubmit(){
+            var n = Number(document.form[frm].elements["n"].value);
+            return n;
+        }
+         function TwoSubmit(){
+            var n = Number(document.form[frm].elements["x"].value);
+            return n;
+        }
+        
         function factorial(f){
             let fac = 1;
             for(var i = 1; i <= f; i++){
@@ -14,8 +21,8 @@
             return fac;
         }
 
-        var x = Number(prompt("Введите x")); // Число, которое вводит пользователь
-        var i = Number(prompt("Введите кол-во шагов")); // Кол-во шагов
+        var x = OneSubmit(); // Число, которое вводит пользователь
+        var i = OneSubmit(); // Кол-во шагов
         var x1 = 0;
         var sum = 1
         ;
@@ -27,13 +34,14 @@
         }
         
         document.write(sum)
-    }
     </script>
 </head>
 <body>
     <form id="frm">
         <input type="text" id="n">
-        <input type="submit" onclick="BTS" value="отправить">
+        <input type="submit" onclick="OneSubmit" value="отправить">
+        <input type="text" id="x">
+        <input type="submit" onclick="TwoSubmit" value="отправить">
     </form>
 </body>
 </html>
