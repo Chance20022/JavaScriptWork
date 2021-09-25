@@ -4,24 +4,20 @@
     <meta charset="UTF-8">
     <title>Formula</title>
     <script>
+        function factorial(f){
+            let fac = 1;
+            for(var i = 1; i <= f; i++){
+                fac *= i;
+             }
+             return fac;
+        }
+        
         function OneSubmit(){
-            var x = 0; // Число, которое вводит пользователь
-            var i = 0; // Кол-во шагов
-            
-            x = Number(document.form[frm].elements["x"].value);
-            i = Number(document.form[frm].elements["n"].value);
-            
-            function factorial(f){
-                let fac = 1;
-                for(var i = 1; i <= f; i++){
-                    fac *= i;
-                }
-                return fac;
-            }
+            var x = Number(document.form[frm].elements["x"].value); // Число, которое вводит пользователь
+            var i = Number(document.form[frm].elements["n"].value); // Кол-во шагов
 
             var x1 = 0;
-            var sum = 1
-            ;
+            var sum = 1;
 
             for(let n = 1; n <= i; n++){
                 x1 = (((-1)**n) * (x**(2*n)))/(factorial(2*n));
