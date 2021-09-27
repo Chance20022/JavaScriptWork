@@ -7,8 +7,21 @@
 <body>
     <script>
         function OneSumbit(){
-            var mas = Number(document.getElementById("mas").value);
+            // Алгоритм превращения массив из строки цифр в массив цифр 
+            var masStr = document.getElementById("mas").value; // получение из формы
+            var mas = [];
+            var counterMasStr = "";
+            for(var i = 0; i < masStr.length; i++){ // Разделяю элементы на разные строки
+                if(masStr[i] == " ") {mas.push(counterMasStr); counterMasStr = ""; continue;}
+                counterMasStr += masStr[i];
+            }
+            mas.push(counterMasStr)
             
+            // Строки в цифры
+            for(var i = 0; i < mas.length; i++){
+                mas[i] =    Number(mas[i]);
+            }
+
             //сколько 0 в массиве
             var counter = 0;
             for(var i = 0; i < mas.length; i++){
