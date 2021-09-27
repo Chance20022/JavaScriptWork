@@ -34,7 +34,7 @@
                 if(min > mas[i]) min = mas[i];
             }
 
-            min = mas.indexOf(-1); // получаю индекс этого элемента
+            min = mas.indexOf(min); // получаю индекс этого элемента
             var sum = 0;
 
             for(var i = min; i < mas.length; i++) sum += mas[i]; // Суммирование
