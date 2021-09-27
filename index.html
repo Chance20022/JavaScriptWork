@@ -16,12 +16,12 @@
                 counterMasStr += masStr[i];
             }
             mas.push(counterMasStr)
-            
+            masStr = 0;
             // Строки в цифры
             for(var i = 0; i < mas.length; i++){
                 mas[i] =    Number(mas[i]);
             }
-
+            
             //сколько 0 в массиве
             var counter = 0;
             for(var i = 0; i < mas.length; i++){
