@@ -16,7 +16,7 @@
                 counterMasStr += masStr[i];
             }
             mas.push(counterMasStr)
-            masStr = 0;
+            masStr.slice(0);
             // Строки в цифры
             for(var i = 0; i < mas.length; i++){
                 mas[i] =    Number(mas[i]);
