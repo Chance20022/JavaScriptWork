@@ -6,7 +6,36 @@
 </head>
 <body>
     <script>
+        
+        function replaseAt(masStr, number, inte, z){
+            var str = "";
+            var checkInto = false;
+            var checkState = true;
+            for(var i = 0; i < masStr.length; i++){
+                if(checkState) if(i == inte) checkInto = true;
+
+                if(!checkInto) str += masStr[i];
+                else { str+=number[z]; checkState = false; checkInto = false;} 
+            }
+
+            return str;
+        }
+
         function OneSumbit(){
+            var number =["zero" ,"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+
+            var masStr = String(document.getElementById("stringNum").value); // получение из формы
+            for(var i = 0; i < masStr.length; i++){
+                for(var z = 0; z < 10; z++){
+                    if(masStr[i] == String(z)) {masStr = replaseAt(masStr, number, i, z); continue; }
+                    else if(masStr[i] == " ") continue;
+                }
+            }
+            alert(masStr);
+        }
+        
+        // 2 задание
+        /*function OneSumbit(){
             // Алгоритм превращения массив из строки цифр в массив цифр 
             var masStr = document.getElementById("mas").value; // получение из формы
             var mas = [];
@@ -50,6 +79,7 @@
 
             alert("Сумма всех модулей элементов " + sum);    
         }
+        */
         
         
         /*
