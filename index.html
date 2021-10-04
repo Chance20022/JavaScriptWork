@@ -6,7 +6,6 @@
 </head>
 <body>
     <script>
-        
         function replaseAt(masStr, number, inte, z){
             var str = "";
             var checkInto = false;
@@ -22,7 +21,7 @@
         }
 
         function OneSumbit(){
-            var number =["zero" ,"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+            var number = ["zero" ,"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
 
             var masStr = String(document.getElementById("stringNum").value); // получение из формы
             for(var i = 0; i < masStr.length; i++){
@@ -114,7 +113,7 @@
         */
     </script>
         <form id="massive">
-        <input type="text" id="mas">
+        <input type="text" id="stringNum">
         <input type="submit" onclick="OneSumbit()" value="Отправить массив">
         </form>
 </body>
