@@ -6,7 +6,19 @@
 </head>
 <body>
     <script>
-        function replaseAt(masStr, number, inte, z){
+        var str = prompt("Введите вашу строку");    
+        var regexp = /(\d\d\d|\d\d|\d)\.(\d\d\d|\d\d|\d)\.(\d\d\d|\d\d|\d)\.(\d\d\d|\d\d|\d)/;
+        
+        var answer = str.match(regexp);
+        var check = false;
+        for(var i = 1; i < answer.length; i++){
+            if(answer[i] < 0 || answer[i] > 255) { check = true; break; }
+        }
+
+        if(check) alert("Вы ввели неправильный IP-адресс");
+        else{ alert(answer[0]); }
+        
+        /*function replaseAt(masStr, number, inte, z){
             var str = "";
             var checkInto = false;
             var checkState = true;
@@ -32,6 +44,7 @@
             }
             alert(masStr);
         }
+        */
         
         // 2 задание
         /*function OneSumbit(){
