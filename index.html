@@ -6,11 +6,35 @@
 </head>
 <body>
     <script>
+        function Vector(x,y,z){
+            this.x = x;
+            this.y = y;
+            this.z = z;
+
+            this.getLength = function(){
+                var temp = 0;
+
+                temp = (x*x) + (y*y) + (z*z);
+                temp = Math.sqrt(temp);
+                alert("Длина вектора - " + temp);
+            }
+        }
+
+        var x = prompt("Введите x");
+        var y = prompt("Введите Y");
+        var z = prompt("Введите z");
+
+        var vector = new Vector(x,y,z);
+        vector.getLength();
+        
+        /*
+        // 4 задание с регуляркой.
         var str = "Верный IP адресс - 1.1.1.1 не верный IP адресс - 1.1.256.1 вот так";
         var regexp = /\b([01]?\d\d?|2[0-4]\d|25[0-5])\.([01]?\d\d?|2[0-4]\d|25[0-5])\.([01]?\d\d?|2[0-4]\d|25[0-5])\.([01]?\d\d?|2[0-4]\d|25[0-5])\b/g;
         var group = str.match(regexp);
 
         alert(group);
+        */
         
         // Вторая вариации регулярки
         /*
