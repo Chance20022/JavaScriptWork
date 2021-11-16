@@ -14,8 +14,8 @@
         var temp = 0;
 
         if(c / n > 1){
-            for(var i = 0; i < n; i++){
-                if(i+1 == n) i = 0;
+            for(var i = 0; i < n+1; i++){
+                if(i == n) i = 0;
                 c--;
                 if(c == 0){
                     c = i;
