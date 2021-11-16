@@ -6,7 +6,39 @@
 </head>
 <body>
     <script>
-        function Vector(x,y,z){
+        
+        var a = +prompt("Введите a");
+        var b = +prompt("Введите b");
+        var n = +prompt("Введите n");
+        var c = a + b;
+        var temp = 0;
+
+        if(c / n > 1){
+            for(var i = 0; i < n; i++){
+                if(i+1 == n) i = 0;
+                c--;
+                if(c == 0){
+                    c = i;
+                    break;
+                }
+            }
+            alert("(Первый вариант решения) Ваш ответ " + c);
+        }
+        else{
+            alert("(Первый вариант решения) Ваш ответ " + c);
+        }
+
+        c = a + b;
+        if(c / n > 1){
+            temp = c % n;
+            alert("(Второй вариант решения) Ваш ответ " + temp);
+        }
+        else{
+            alert("(Второй вариант решения) Ваш ответ " + temp);
+        }
+        
+        // 5 задание, работа с объектами
+        /*function Vector(x,y,z){
             this.x = x;
             this.y = y;
             this.z = z;
@@ -26,7 +58,7 @@
 
         var vector = new Vector(x,y,z);
         vector.getLength();
-        
+        */
         /*
         // 4 задание с регуляркой.
         var str = "Верный IP адресс - 1.1.1.1 не верный IP адресс - 1.1.256.1 вот так";
