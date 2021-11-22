@@ -6,7 +6,26 @@
 </head>
 <body>
     <script>
+        function moduleRev(t, m){
+            while(t > m){
+                t = t % m;
+            }
+            return t;
+        }
+
+        var A = +prompt("Введите A");
+        var x = 0;
+        var m = +prompt("Введите модуль");
+
+        if(A % 2 == 0 && x % 2 == 0) alert("Обратных чисел нет");
+        else{
+            for(var i = 0; i < m; i++){
+                x = moduleRev(A * i, m);
+                if(x == 1) {alert("Обратное число - " + i); break;}   
+            }
+        }
         
+        /* //Нахождение обратного числа
         var a = +prompt("Введите a");
         var b = +prompt("Введите b");
         var n = +prompt("Введите n");
@@ -36,7 +55,7 @@
         else{
             alert("(Второй вариант решения) Ваш ответ " + c);
         }
-        
+        */
         // 5 задание, работа с объектами
         /*function Vector(x,y,z){
             this.x = x;
