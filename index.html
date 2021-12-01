@@ -3,9 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Module</title>
+    <style>
+        .bodyBg{
+    background: none;
+        }
+
+        .bodyOld{
+            background: rgb(77, 77, 197);
+        }
+
+        .but{
+            margin: 15px;
+        }
+
+        .divv{
+            margin: 15px;
+        }   
+    </style>
 </head>
-<body>
+<body class="bodyBg">
     <script>
+        <button class="but" onclick="changeBackground()">Поменять цвет</button>
+
+        <div class="divv">
+            <input type="text" id="lk">
+            <input type="submit" onclick="changeLink()" value="Отправить">
+            <br>
+            <a style="color: black;" href="https://google.ru">Перейти по ссылке</a>
+        </div>
+
+        <form action=""></form>
+        <script>
+            function changeBackground(){
+                document.body.classList.toggle("bodyOld");
+            }
+
+            function changeLink(){
+                var a = document.querySelector('a[href="https://google.ru"]');
+                var b = document.getElementById("lk").value;
+                a.setAttribute("href", b);
+            }
+        
+        /*
         function moduleRev(t, m){
             while(t > m){
                 t = t % m;
@@ -24,7 +63,7 @@
                 if(x == 1) {alert("Обратное число - " + i); break;}   
             }
         }
-        
+        */
         /* //Нахождение обратного числа
         var a = +prompt("Введите a");
         var b = +prompt("Введите b");
