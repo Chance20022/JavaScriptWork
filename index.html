@@ -12,33 +12,51 @@
             background: rgb(77, 77, 197);
         }
 
-        .but{
-            margin: 15px;
-        }
-
         .divv{
             margin: 15px;
         }   
     </style>
 </head>
-<body class="bodyBg">
-        <button class="but" onclick="changeBackground()">Поменять цвет</button>
+<body>
+        <div class="divv">
+            <input type="text" id="colorbg">
+            <button onclick="changeBackground()">Поменять цвет заднего фона</button>
+        </div>
 
         <div class="divv">
             <input type="text" id="lk">
-            <input type="submit" onclick="changeLink()" value="Отправить">
+            <input type="submit" onclick="changeLink()" value="Изменить ссылку">
             <br>
             <a style="color: black;" href="https://google.ru">Перейти по ссылке</a>
         </div>
+
+        <div class="divv">
+            <h2 id="test">Меняем цвет текста</h2>
+            <button onclick="changeColorText()">Поменять цвет</button>
+        </div>
         <script>
+
+            
             function changeBackground(){
-                document.body.classList.toggle("bodyOld");
+                var colorBG = document.getElementById("colorbg").value;
+                if(colorBG == "none") document.body.style.background = "white";
+                else document.body.style.background = colorBG;
             }
 
             function changeLink(){
                 var a = document.querySelector('a[href="https://google.ru"]');
                 var b = document.getElementById("lk").value;
                 a.setAttribute("href", b);
+            }
+
+            function changeColorText(){
+                var textColor = document.getElementById("test");
+                var randR = String(Math.floor(Math.random() * 255 + 1));
+                var randG = String(Math.floor(Math.random() * 255 + 1));
+                var randB = String(Math.floor(Math.random() * 255 + 1));
+                var RGB = "rgb(" + randR + "," + randG + "," + randB + ")";
+                
+                textColor.style.color = RGB;
             }
     </script>
 </body>
