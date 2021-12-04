@@ -22,13 +22,15 @@
             <a style="color: black;" href="https://google.ru">Перейти по ссылке</a>
         </div>
 
+ 
         <div class="divv">
             <h2 id="test">Меняем цвет текста</h2>
+            <input type="text" id="ch">
             <button onclick="changeColorText()">Поменять цвет</button>
         </div>
         <script>
 
-            var browser = navigator.userAgent;
+            /*var browser = navigator.userAgent;
             var answer = 0;
             var x = prompt("Введите ваш X");
 
@@ -46,6 +48,7 @@
             }
 
             alert(answer);
+            */
             
             function changeBackground(){
                 var colorBG = document.getElementById("colorbg").value;
@@ -61,12 +64,9 @@
 
             function changeColorText(){
                 var textColor = document.getElementById("test");
-                var randR = String(Math.floor(Math.random() * 255 + 1));
-                var randG = String(Math.floor(Math.random() * 255 + 1));
-                var randB = String(Math.floor(Math.random() * 255 + 1));
-                var RGB = "rgb(" + randR + "," + randG + "," + randB + ")";
+                var text = document.getElemebtById("ch");
                 
-                textColor.style.color = RGB;
+                textColor.style.color = ch;
             }
     </script>
 </body>
